@@ -39,13 +39,14 @@
 
 #include "connection.h"
 #include "null_types.h"
+#include "signal.h"
 #include <ros/message_event.h>
 #include <ros/parameter_adapter.h>
 
 #include <boost/bind.hpp>
 #include <boost/thread/mutex.hpp>
 
-namespace message_filters
+/*namespace message_filters
 {
 using ros::ParameterAdapter;
 
@@ -73,7 +74,7 @@ public:
 
 template<typename P0, typename P1, typename P2, typename P3, typename P4, typename P5, typename P6, typename P7, typename P8>
 class CallbackHelper9T :
-  public CallbackHelper9<typename ParameterAdapter<P0>::Message,
+  public CallbackHelper<typename ParameterAdapter<P0>::Message,
                          typename ParameterAdapter<P1>::Message,
                          typename ParameterAdapter<P2>::Message,
                          typename ParameterAdapter<P3>::Message,
@@ -143,7 +144,7 @@ private:
 template<typename M0, typename M1, typename M2, typename M3, typename M4, typename M5, typename M6, typename M7, typename M8>
 class Signal9
 {
-  typedef boost::shared_ptr<CallbackHelper9<M0, M1, M2, M3, M4, M5, M6, M7, M8> > CallbackHelper9Ptr;
+  typedef boost::shared_ptr<CallbackHelper<M0, M1, M2, M3, M4, M5, M6, M7, M8> > CallbackHelper9Ptr;
   typedef std::vector<CallbackHelper9Ptr> V_CallbackHelper9;
 
 public:
@@ -310,7 +311,7 @@ private:
   V_CallbackHelper9 callbacks_;
 };
 
-} // message_filters
+} // message_filters*/
 
 #endif // MESSAGE_FILTERS_SIGNAL9_H
 

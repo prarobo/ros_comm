@@ -15,6 +15,9 @@ catkin_python_setup()
 
 find_package(Boost REQUIRED COMPONENTS signals thread)
 
+# Use C++11
+add_definitions(-std=gnu++0x)
+
 include_directories(include ${catkin_INCLUDE_DIRS} ${Boost_INCLUDE_DIRS})
 link_directories(${catkin_LIBRARY_DIRS})
 
